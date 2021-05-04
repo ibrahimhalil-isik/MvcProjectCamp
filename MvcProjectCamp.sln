@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAcce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{3A25D531-D52B-4DEF-9315-4E55044382F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{A644D419-7820-49C5-9667-43D91D45CB81}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreLayer", "Core\CoreLayer.csproj", "{A644D419-7820-49C5-9667-43D91D45CB81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
