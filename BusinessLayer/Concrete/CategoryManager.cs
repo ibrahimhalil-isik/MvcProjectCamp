@@ -1,8 +1,10 @@
 ﻿using Business.Abstract;
+using Business.ValidationRules.FluentValidation;
 using Core.DataAccess.EntityFramework;
 using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concrete;
 using DataAccess.Abstract;
+using DataAccessLayer.Concrete.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -23,19 +25,14 @@ namespace BusinessLayer.Concrete
 
         public IResult Add(Category category)
         {
-            if (   category.CategoryName == "" 
-                || category.CategoryName.Length <= 3
-                || category.CategoryDescription == "" 
-                || category.CategoryName.Length >= 51
-                )
-            {
-                return new ErrorResult();
-            }
-            else
-            {
-                _categoryDal.Add(category);
-                return new SuccessResult();
-            }            
+            _categoryDal.Add(category);
+            return new SuccessResult();
+        }
+
+        public IResult Delete(Category category)
+        {
+            _categoryDal.Delete(category);
+            return new SuccessResult();
         }
 
         public IDataResult<List<Category>> GetAll()
@@ -43,5 +40,17 @@ namespace BusinessLayer.Concrete
             return new SuccessDataResult<List<Category>>(_categoryDal.GetAll());
         }
 
+        public Category GetById(int categoryId)
+        {
+            return _categoryDal.Get(c => c.CategoryId == categoryId);
+
+            //return new SuccessDataResult<Category>(_categoryDal.Get(c => c.CategoryId == categoryId));
+        }
+
+        public IResult Update(Category category)
+        {
+            _categoryDal.Update(category);
+            return new SuccessResult();
+        }
     }
 }
