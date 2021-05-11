@@ -193,8 +193,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Statistics\image.jfif" />
-    <Content Include="Statistics\Mvc_camp_project_statistics.PNG" />
+    <Content Include="Images\image.jfif" />
+    <Content Include="Images\Mvc_camp_project_statistics.PNG" />
     <Content Include="Themes\AdminLTE-3.0.4\build\config\postcss.config.js" />
     <Content Include="Themes\AdminLTE-3.0.4\build\config\rollup.config.js" />
     <Content Include="Themes\AdminLTE-3.0.4\build\js\AdminLTE.js" />
